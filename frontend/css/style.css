@@ -1,4 +1,85 @@
+#header {
+  background-color: #030303;
+  padding: 10px 0;
+}
 
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  max-height: 100px;
+}
+
+.header-search {
+  display: flex;
+  align-items: center;
+}
+
+.input-select {
+  padding: 8px 12px;
+  border: 10px solid #ccc;
+  border-radius: 3px;
+}
+
+.input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.search-btn {
+  padding: 5px 10px;
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.header-ctn a {
+  display: flex;
+  align-items: center;
+  color: #555;
+  text-decoration: none;
+}
+
+.header-ctn .qty {
+  background-color: #337ab7;
+  color: #fff;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+}
+
+.menu-toggle {
+  margin-left: 10px;
+}
+
+#navigation {
+  background-color: #337ab7;
+  color: #fff;
+  padding: 10px 0;
+}
+
+#navigation .main-nav li {
+  margin-right: 15px;
+}
+
+#navigation .main-nav a {
+  color: #020202;
+  text-decoration: none;
+}
+
+#navigation .main-nav .active a {
+  font-weight: bold;
+}
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -23,6 +104,7 @@ a:hover, a:focus {
   color: #D10024;
   text-decoration: none;
   outline: none;
+ 
 }
 
 ul, ol {
@@ -43,6 +125,7 @@ ul, ol {
   text-align: center;
   -webkit-transition: 0.2s all;
   transition: 0.2s all;
+
 }
 
 .primary-btn:hover, .primary-btn:focus {
@@ -2040,4 +2123,82 @@ height: 100px;
     float: none;
     margin-top: 10px;
   }
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal h3 {
+  margin-top: 0;
+}
+
+.modal p {
+  margin-bottom: 20px;
+}
+
+.modal button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #337ab7;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+.btn-add-categoria {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  margin: 20px auto;
+  background-color: #ddd;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.btn-add-categoria:hover {
+  background-color: #ccc;
+}
+
+
+.table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+}
+
+.table tbody tr:hover {
+  background-color: #f9f9f9;
 }

@@ -6,35 +6,34 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-
 	<title>Alquilartemis</title>
 
-	
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
-	<link type="text/css" rel="stylesheet" href="./frontend/css/bootstrap.min.css" />
+
 
 
 	<link type="text/css" rel="stylesheet" href="./frontend/css/slick.css" />
 	<link type="text/css" rel="stylesheet" href="./frontend/css/slick-theme.css" />
 
-	
+
 	<link type="text/css" rel="stylesheet" href="./frontend/css/nouislider.min.css" />
 
-	
+
 	<link rel="stylesheet" href="./frontend/css/font-awesome.min.css">
 
-	
+
 	<link type="text/css" rel="stylesheet" href="./frontend/css/style.css" />
 
-	
 
 </head>
 
 <body>
 
 	<header>
-		
+
 		<div id="top-header">
 			<div class="container">
 				<ul class="header-links pull-left">
@@ -48,13 +47,13 @@
 				</ul>
 			</div>
 		</div>
-		
 
-	
+
+
 		<div id="header">
 
 			<div class="container">
-			
+
 				<div class="row">
 					<div class="col-md-3">
 						<div class="header-logo">
@@ -144,9 +143,9 @@
 	<nav id="navigation">
 		<div class="container">
 			<div id="responsive-nav">
-				<ul class="main-nav nav navbar-nav">
+				<ul class="main-nav nav navbar-nav d-flex flex-row m-4">
 					<li class="active"><a href="#">Home</a></li>
-					<li><a href="./backend/catego.php">CATEGORIAS</a></li>
+					<li><a href="#">CATEGORIAS</a></li>
 					<li><a href="#">CONSTRUCTORAS</a></li>
 					<li><a href="#">COTIZACIONES</a></li>
 					<li><a href="#">EMPLEADOS</a></li>
@@ -164,16 +163,76 @@
 					<h3 class="breadcrumb-header">ALQUILARTEMIS</h3>
 					<ul class="breadcrumb-tree">
 						<li><a href="#">Home</a></li>
-						<li class="active">EMPLEADOS</li>
+						<li class="active">CATEGORIAS</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
+	<!-- Button trigger modal -->
+	<button type="button" class="btn-add-categoria  btn b.text-muted d-flex justify-content-center "
+		data-bs-toggle="modal" data-bs-target="#exampleModal">
+		Agregar
+	</button>
 
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h1 class="modal-title fs-5" id="exampleModalLabel">New categoria</h1>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<form class="rd-form rd-form-variant-2 rd-mailform" id="nuevoo"
+						data-form-output="form-output-global" data-form-type="contact-modal" method="post">
+						<div class="row row-14 gutters-14">
+							<div class="col-12">
+								<div class="form-wrap">
+									<label for="nombre">Nombre Categoria</label>
+									<input class="form-input" id="nombre" type="text" data-constraints="@Required">
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-wrap">
+									<label for="descripcion">Descripcion</label>
+									<textarea class="form-input" id="descripcion" type="text"></textarea>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-wrap">
+									<label for="img">Imagen</label>
+									<input class="form-input" id="img" type="file">
+								</div>
+							</div>
+						</div>
+						<button class="btn btn-success" type="submit">Agregar</button>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
 	<div class="section">
 		<div class="container">
 			<div class="row">
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col"># ID</th>
+							<th scope="col">Nombre</th>
+							<th scope="col">Descripcion</th>
+							<th scope="col">Imagen</th>
+							<th scope="col">Borrar</th>
+							<th scope="col">Editar</th>
+						</tr>
+					</thead>
+					<tbody id="categorias">
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
@@ -183,7 +242,8 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="newsletter">
-						<p>SUSCRIBETE AL CANAL DEL TRAINER <strong>CAMPUSLADNS</strong></p>
+						<p>SUSCRIBETE AL CANAL DEL TRAINER <strong><a href="https://www.youtube.com/@campuslandsbuc"
+									target="_blank">CAMPUSLADNS</strong></p>
 						<form>
 							<input class="input" type="email" placeholder="Introduce tu email">
 							<button class="newsletter-btn"><i class="fa fa-envelope"></i> Subscribe</button>
@@ -294,12 +354,17 @@
 		</div>
 	</footer>
 
+
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/nouislider.min.js"></script>
 	<script src="js/jquery.zoom.min.js"></script>
 	<script src="js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
+	<script src="./frontend/js/indexx.js" type="module"></script>
 
 </body>
 
