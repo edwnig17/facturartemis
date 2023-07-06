@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100vh;
+}
+/* body{
+    background-image: url(Fortnite_Flatline.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
+.offcanvas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.form-control::placeholder {
+    color: white;
+}
+@media (max-width: 993px){
+    .offcanvas{
+        flex-direction: column;
+    }
+    .navbar-nav{
+        margin-left: 5px!important;
+    }
+    .homme{
+        margin-right: -160%;
+    }
+}
+
+.tabla{
+    margin: 2% 10% auto 10%;
+}
+
+.fomu{
+    border: 1px black solid;
+    border-radius: 15px;
+}
