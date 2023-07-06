@@ -11,4 +11,3 @@ routerCategorias.put("/:id", categoriasController.updateCategoria);
 
 
 export default routerCategorias;
-

@@ -3,7 +3,7 @@ import cors from 'cors';
 import routerCategorias from './routes/categorias.routes.js';
 
 const app = express();
-app.set("port",4000);
+app.set("port",3309);
 
 app.use(cors());
 

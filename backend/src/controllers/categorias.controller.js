@@ -8,7 +8,7 @@ const errores = (res,error)=>{
 const conection_result = async (res,sqldata)=>{
     try {
         const connection = await getConnection();
-        const result = await connection.query(sqldata);
+        const result = await connection.query(...sqldata);
         res.json(result);
     } catch (error) {
         errores(res,error)
